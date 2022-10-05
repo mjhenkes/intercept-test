@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <script>
+    let count = 0
+    const intervalId = setInterval(() => {
+        fetch('/api/merchant/auth?application=merchant');
+        if (count > 100) {
+          clearInterval(intervalId)
+        } else {
+          count++
+        }
+    }, 100)
+
+  </script>
+</body>
+</html>
